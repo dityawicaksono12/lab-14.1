@@ -30,7 +30,7 @@ userSchema.pre('save', async function (next) {
 })
 
 // to compare incoming password with hash password
-userSchema.methods.isCorrectPwd = async function (password) {
+userSchema.methods.isCorrectPassword = async function (password) {
     return bcrypt.compare(password, this.password)
 }
 
